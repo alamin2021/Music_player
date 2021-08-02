@@ -1,0 +1,515 @@
+1
+00:00:00,720 --> 00:00:07,950
+All righty, so let's finish up our UI and that's going to be adding our own progress, bar and button
+
+2
+00:00:07,950 --> 00:00:08,700
+controls.
+
+3
+00:00:09,480 --> 00:00:12,030
+So we're gonna start with the progress bar.
+
+4
+00:00:12,450 --> 00:00:16,090
+So let's jump back over to our code in our H.T. Amelle.
+
+5
+00:00:16,470 --> 00:00:19,260
+We're going to create this underneath our song.
+
+6
+00:00:20,160 --> 00:00:23,640
+We're going to add in title here, progress.
+
+7
+00:00:24,360 --> 00:00:32,460
+And we're gonna start with a div with the class of progress, stasch container and the I.D. as well
+
+8
+00:00:32,520 --> 00:00:34,620
+of progress stasch container.
+
+9
+00:00:35,130 --> 00:00:43,050
+And inside of this, we're gonna create another div with the class of progress and the idea of progress.
+
+10
+00:00:43,650 --> 00:00:48,690
+So this container is going to be what holds our progress bar.
+
+11
+00:00:48,720 --> 00:00:53,550
+And this is the actual bar that's gonna change sizes as we're going through the song.
+
+12
+00:00:54,450 --> 00:01:04,140
+And we also are going to have a div that is going to hold our duration as well as our current time.
+
+13
+00:01:05,010 --> 00:01:09,720
+So we're gonna make Span's for that and we're gonna provide an I.D..
+
+14
+00:01:10,790 --> 00:01:16,190
+Of current dash time, and for right now, we're just going to hardcoded.
+
+15
+00:01:16,250 --> 00:01:22,400
+So it'll be zero zero zero and we're going to create another span.
+
+16
+00:01:23,510 --> 00:01:25,910
+And this one is going to be for our duration.
+
+17
+00:01:26,690 --> 00:01:31,490
+And this one I know off the top of my head that it's two minutes and six seconds.
+
+18
+00:01:32,000 --> 00:01:35,930
+You can even actually see that within our audio controls here.
+
+19
+00:01:36,470 --> 00:01:38,330
+So we're just hard coding that value.
+
+20
+00:01:39,050 --> 00:01:39,430
+OK.
+
+21
+00:01:39,560 --> 00:01:41,880
+So let's save that and check it out.
+
+22
+00:01:43,350 --> 00:01:43,750
+OK.
+
+23
+00:01:43,810 --> 00:01:46,540
+So you can see that all of the styling work is done for us.
+
+24
+00:01:46,570 --> 00:01:47,380
+That's nice.
+
+25
+00:01:47,830 --> 00:01:53,080
+And we have our project container here and we have our actual progress here.
+
+26
+00:01:54,040 --> 00:01:54,820
+And you know what?
+
+27
+00:01:54,880 --> 00:02:00,550
+Let's actually hide the controls because we want to actually build out the rest of our UI and see how
+
+28
+00:02:00,550 --> 00:02:01,570
+it's actually going to look.
+
+29
+00:02:02,230 --> 00:02:03,520
+So let's do that.
+
+30
+00:02:03,550 --> 00:02:05,680
+Let's just get rid of these controls for now.
+
+31
+00:02:06,130 --> 00:02:09,820
+So the next time we'll control our audio will be through our JavaScript.
+
+32
+00:02:10,450 --> 00:02:15,430
+And if we jump into the sea, assess here, we can see that we do have.
+
+33
+00:02:16,500 --> 00:02:17,140
+Our styling.
+
+34
+00:02:17,190 --> 00:02:18,970
+All done for our progress container.
+
+35
+00:02:19,620 --> 00:02:22,920
+You can see that we're using border radius again on both of these.
+
+36
+00:02:23,310 --> 00:02:24,600
+This is the background color.
+
+37
+00:02:24,620 --> 00:02:25,830
+This is the dark color.
+
+38
+00:02:26,310 --> 00:02:30,150
+And you can see that we already have a width here of sixty six percent.
+
+39
+00:02:30,630 --> 00:02:37,140
+So this is going to be changed dynamically in our JavaScript when our song is playing to show exactly
+
+40
+00:02:37,140 --> 00:02:38,520
+how far through the song we are.
+
+41
+00:02:38,820 --> 00:02:42,780
+But for now, it's just a static value of sixty six percent.
+
+42
+00:02:43,170 --> 00:02:47,070
+OK, so let's save that and jump back.
+
+43
+00:02:47,790 --> 00:02:50,550
+OK, so that's more what our UI is actually going to look like.
+
+44
+00:02:51,030 --> 00:02:56,700
+And you can see we have a space here that is a space for our button controls.
+
+45
+00:02:57,420 --> 00:02:59,300
+So let's jump into that next.
+
+46
+00:03:00,210 --> 00:03:03,140
+Back in the code, we can see at the top of our H.
+
+47
+00:03:03,140 --> 00:03:09,300
+T Amelle, if we use our word wrap Alte Z, we can see that we're already importing font awesome into
+
+48
+00:03:09,300 --> 00:03:09,930
+our project.
+
+49
+00:03:10,590 --> 00:03:12,480
+So you don't need to worry about that part.
+
+50
+00:03:13,020 --> 00:03:19,110
+But if you want to know how to add different icons, I'm just going to go back briefly to the font awesome
+
+51
+00:03:19,160 --> 00:03:22,530
+Web site and I'll provide this link within the course.
+
+52
+00:03:22,800 --> 00:03:27,540
+But you can see that we have a number of different icons here and you can search.
+
+53
+00:03:27,600 --> 00:03:30,660
+So let's say that I want to search for a play button.
+
+54
+00:03:31,560 --> 00:03:33,120
+This is the button that we're gonna use.
+
+55
+00:03:33,150 --> 00:03:37,230
+But let's say that you wanted to use a play circle button instead.
+
+56
+00:03:37,260 --> 00:03:38,280
+You could click on that.
+
+57
+00:03:38,850 --> 00:03:43,550
+So any icon that you click on, you can see that you can actually copy the H.
+
+58
+00:03:43,560 --> 00:03:45,390
+T Amelle for the icon.
+
+59
+00:03:45,780 --> 00:03:49,440
+And that's how you would add it into your project.
+
+60
+00:03:49,750 --> 00:03:53,430
+OK, so let's jump back to our HD, UML and make our buttons.
+
+61
+00:03:54,330 --> 00:03:57,810
+So we're gonna go below our progress section here.
+
+62
+00:03:58,170 --> 00:04:00,060
+We're going to comment out another title.
+
+63
+00:04:01,110 --> 00:04:09,300
+And this is going to be for our controls and we're going to start by creating a div again that will
+
+64
+00:04:09,300 --> 00:04:10,620
+act as a parent element.
+
+65
+00:04:11,010 --> 00:04:15,030
+This allows us to really control the placement on the page.
+
+66
+00:04:16,230 --> 00:04:19,320
+And we're going to go ahead and make each of our icons here.
+
+67
+00:04:19,950 --> 00:04:24,660
+So we're going to use AI is our element.
+
+68
+00:04:25,260 --> 00:04:28,450
+And we're going to use the classes of F.A.A. s.
+
+69
+00:04:28,560 --> 00:04:29,920
+So that stands for fun.
+
+70
+00:04:30,060 --> 00:04:30,480
+Awesome.
+
+71
+00:04:30,540 --> 00:04:31,140
+Solid.
+
+72
+00:04:31,620 --> 00:04:34,500
+And then I can add another class by adding another period.
+
+73
+00:04:35,040 --> 00:04:37,560
+In this case, we're going to do our previous button first.
+
+74
+00:04:37,620 --> 00:04:40,530
+And that is F.A.A. dash backward.
+
+75
+00:04:41,970 --> 00:04:48,690
+And we're also going to give it an I.D. so we can keep stacking these an I.D. of previous.
+
+76
+00:04:48,720 --> 00:04:52,860
+But I'm just gonna put Prešov and we can press enter there.
+
+77
+00:04:53,520 --> 00:04:56,310
+And lastly, I'm actually going to also add a title.
+
+78
+00:04:57,350 --> 00:05:02,120
+So that when we hover over it, we can see exactly the functionality of that icon.
+
+79
+00:05:04,030 --> 00:05:07,900
+OK, so I can paste this twice more.
+
+80
+00:05:10,240 --> 00:05:11,860
+And we're going to change this.
+
+81
+00:05:11,890 --> 00:05:13,510
+This is going to be our play button.
+
+82
+00:05:13,660 --> 00:05:15,010
+So just f a play.
+
+83
+00:05:15,640 --> 00:05:21,250
+I'm actually gonna give this another class main dash button because I want this button to be bigger
+
+84
+00:05:21,370 --> 00:05:22,240
+than the other two.
+
+85
+00:05:23,120 --> 00:05:25,060
+And and change the idea to play.
+
+86
+00:05:25,630 --> 00:05:27,190
+And the title of this.
+
+87
+00:05:27,190 --> 00:05:28,390
+Well, to play.
+
+88
+00:05:29,530 --> 00:05:33,010
+And the last button is going to be forward.
+
+89
+00:05:33,040 --> 00:05:38,920
+So we're just going to change that to forward and we're going to change this next.
+
+90
+00:05:39,730 --> 00:05:42,790
+And our title will also be next.
+
+91
+00:05:43,450 --> 00:05:44,950
+OK, so let's save that.
+
+92
+00:05:45,160 --> 00:05:48,240
+And next, we're going to jump into the CSX.
+
+93
+00:05:48,550 --> 00:05:54,970
+So if we scroll down, we can see that again, we have some styling included already, including the
+
+94
+00:05:54,970 --> 00:05:57,910
+position of our player controls and the width and everything.
+
+95
+00:05:58,780 --> 00:06:02,140
+And you can see that we're targeting the FAA s class.
+
+96
+00:06:02,590 --> 00:06:04,150
+So that's the main class.
+
+97
+00:06:04,170 --> 00:06:05,980
+It's on all three of our icons.
+
+98
+00:06:06,640 --> 00:06:13,060
+And we're controlling the size with font Dasch size because essentially it acts as a font, even though
+
+99
+00:06:13,060 --> 00:06:13,780
+it's an icon.
+
+100
+00:06:14,290 --> 00:06:21,280
+But there are two very specific classes that we want to have if we are going to use an icon as a button.
+
+101
+00:06:22,060 --> 00:06:27,400
+So if we just jump over right now to our project, we can see that these look great.
+
+102
+00:06:27,880 --> 00:06:32,440
+But when I hover over them, there's no sign that I can actually do anything with them.
+
+103
+00:06:33,310 --> 00:06:38,910
+So what we're gonna do first is we're gonna add in curser pointer.
+
+104
+00:06:38,950 --> 00:06:41,110
+You can see it auto completes if I press tab.
+
+105
+00:06:41,470 --> 00:06:45,200
+And the next thing we're going to add is user select none.
+
+106
+00:06:45,280 --> 00:06:48,130
+You can see if we press tab twice, it will auto complete.
+
+107
+00:06:48,850 --> 00:06:53,650
+So that's to prevent it from being selected like any other font could be selected.
+
+108
+00:06:54,430 --> 00:06:57,640
+OK, so let's save that and check it out.
+
+109
+00:06:58,090 --> 00:07:01,830
+So I was talking about this is like user select because this is a font.
+
+110
+00:07:01,840 --> 00:07:02,920
+We don't want that to happen.
+
+111
+00:07:03,640 --> 00:07:09,490
+And so you can see that when we hover over now, not only do we have our titles, which is great, we
+
+112
+00:07:09,490 --> 00:07:14,380
+have the cursor change to a glove, just like it would with a regular button.
+
+113
+00:07:15,340 --> 00:07:20,560
+It's still maybe could be a little more clear when we're hovering over it that it's ready to be clicked.
+
+114
+00:07:20,980 --> 00:07:24,250
+And we can do that by changing the color of the button.
+
+115
+00:07:25,240 --> 00:07:27,710
+And we can do that in a very quick way.
+
+116
+00:07:28,150 --> 00:07:34,000
+So below this, we're going to target our F ace class and we're gonna use a pseudo class hover.
+
+117
+00:07:34,750 --> 00:07:41,050
+So this class will only be initiated when it's being hovered over with the mouse and we're gonna use
+
+118
+00:07:41,110 --> 00:07:45,820
+filter brightness and 80 percent.
+
+119
+00:07:46,600 --> 00:07:52,780
+So that means that our buttons will become 20 percent darker as they're being hovered over.
+
+120
+00:07:53,410 --> 00:07:55,530
+So let's jump back and check that out.
+
+121
+00:07:57,340 --> 00:08:01,810
+OK, so I think that that's a little bit more of a dramatic difference when we're hovering over the
+
+122
+00:08:01,810 --> 00:08:02,320
+button.
+
+123
+00:08:02,860 --> 00:08:03,670
+Perfect.
+
+124
+00:08:03,940 --> 00:08:05,740
+Feels a lot more interactive.
+
+125
+00:08:06,580 --> 00:08:07,010
+All right.
+
+126
+00:08:07,060 --> 00:08:11,260
+So that's pretty much it for our UI in the next one.
+
+127
+00:08:11,280 --> 00:08:13,570
+We'll get started on our functionality.
+
+128
+00:08:14,260 --> 00:08:15,130
+I've seen that one.
+
+129
+00:08:15,670 --> 00:08:16,450
+Bye for now.

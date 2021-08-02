@@ -1,0 +1,503 @@
+1
+00:00:00,680 --> 00:00:07,070
+All righty, so we have a lot of different functionality to get to, but we're going to start with the
+
+2
+00:00:07,070 --> 00:00:12,150
+most basic first, and that is our play pause functionality.
+
+3
+00:00:12,860 --> 00:00:18,380
+You might remember that when we had our controls for our audio within here, though, we already had
+
+4
+00:00:18,380 --> 00:00:21,320
+that ability to play and pause our audio track.
+
+5
+00:00:21,740 --> 00:00:25,610
+We're going to need to transfer that ability to our custom icon here.
+
+6
+00:00:26,360 --> 00:00:32,390
+So first, we're gonna look at a resource that talks about audio and video dom elements.
+
+7
+00:00:33,140 --> 00:00:36,470
+You can see that we have different methods, properties and events.
+
+8
+00:00:37,070 --> 00:00:41,630
+And in this case, we don't have to scroll very far because we're interested in the methods here.
+
+9
+00:00:42,320 --> 00:00:45,440
+We can see that we have a play method and we have a pause method.
+
+10
+00:00:45,470 --> 00:00:47,300
+That's pretty self-explanatory.
+
+11
+00:00:47,900 --> 00:00:52,370
+So we're going to need to trigger these on our audio element.
+
+12
+00:00:52,910 --> 00:00:55,370
+So let's jump back to our code.
+
+13
+00:00:56,790 --> 00:01:01,050
+We're gonna start in our JavaScript and we're going to need to target.
+
+14
+00:01:02,520 --> 00:01:07,350
+A few different things, so we're going to target our audio element because we want to be able to control
+
+15
+00:01:07,350 --> 00:01:07,650
+that.
+
+16
+00:01:08,100 --> 00:01:12,870
+And we're also going to be targeting our buttons because that's what's going to allow us to actually
+
+17
+00:01:12,870 --> 00:01:13,500
+control.
+
+18
+00:01:14,100 --> 00:01:20,100
+So you can see we have ideas for these, but the audio element doesn't have an I.D. So that's because
+
+19
+00:01:20,130 --> 00:01:22,770
+we can reference this in different way.
+
+20
+00:01:24,090 --> 00:01:25,290
+Let's make a constant.
+
+21
+00:01:26,350 --> 00:01:34,000
+Called music for audio element, and this is going to be equal to document query selector.
+
+22
+00:01:34,060 --> 00:01:36,580
+The bottom line here, I'll scroll down and press enter.
+
+23
+00:01:37,330 --> 00:01:44,320
+And so this allows us to select an element or a class or an I.D., anything we want to pass in there.
+
+24
+00:01:44,350 --> 00:01:50,110
+So in this case, because we only have one audio element, we can use this to select that.
+
+25
+00:01:50,980 --> 00:01:54,220
+And below that, we're going to create constants for our buttons.
+
+26
+00:01:54,250 --> 00:01:57,370
+So we're gonna call Prešov B10 for our button.
+
+27
+00:01:58,530 --> 00:02:02,310
+And that's going to equal document dot get element by I.D..
+
+28
+00:02:03,030 --> 00:02:07,110
+And this is are Prešov I.D. that we added on their.
+
+29
+00:02:08,280 --> 00:02:16,200
+And I'm just going to actually copy and paste this to more times, and in this case, we can use our
+
+30
+00:02:16,770 --> 00:02:24,810
+select, which is our command DS or control DS, depending on if you're Mac or Windows.
+
+31
+00:02:25,290 --> 00:02:28,260
+And you can see we've selected both, there's a cursor on each.
+
+32
+00:02:28,860 --> 00:02:31,860
+And I'm going to use that to change that, to play.
+
+33
+00:02:32,370 --> 00:02:36,420
+And I'm going to do the same thing with this and change that to.
+
+34
+00:02:39,240 --> 00:02:40,020
+All right, perfect.
+
+35
+00:02:40,110 --> 00:02:42,240
+So we're done selecting our elements.
+
+36
+00:02:42,930 --> 00:02:48,060
+Next, we're gonna need to make functions for our play pause functionality.
+
+37
+00:02:49,160 --> 00:02:50,540
+We're going to do that below.
+
+38
+00:02:50,750 --> 00:02:53,690
+So we're going to start by commenting on a title.
+
+39
+00:02:54,720 --> 00:02:59,250
+Play an organ and create a function called play song.
+
+40
+00:03:00,420 --> 00:03:05,580
+We're going to make this different than just play, because we already have that method within the audio
+
+41
+00:03:05,580 --> 00:03:06,570
+element itself.
+
+42
+00:03:07,200 --> 00:03:12,610
+Now we're going to target the constant four audio element, which we're calling music, and we're just
+
+43
+00:03:12,610 --> 00:03:14,550
+going to pass in the method of play.
+
+44
+00:03:15,730 --> 00:03:18,630
+And we're gonna do a similar thing with our paws.
+
+45
+00:03:18,970 --> 00:03:24,960
+So I'm actually going to copy this paste below and change this.
+
+46
+00:03:25,510 --> 00:03:28,060
+I'll highlight both of these and change them at once.
+
+47
+00:03:28,110 --> 00:03:28,380
+OK.
+
+48
+00:03:28,690 --> 00:03:29,950
+And they're both paws.
+
+49
+00:03:30,820 --> 00:03:39,030
+Next, we're going to need to trigger play if the music is paused or pause if the music is playing already.
+
+50
+00:03:39,640 --> 00:03:45,520
+So to do that, we're gonna need to add in a boolean that we're gonna set within each of these functions
+
+51
+00:03:46,150 --> 00:03:48,370
+to show whether it is playing or not.
+
+52
+00:03:48,460 --> 00:03:50,500
+So we're gonna commentate a title above.
+
+53
+00:03:51,070 --> 00:03:52,390
+Check if playing.
+
+54
+00:03:52,930 --> 00:03:55,840
+And we're going to let is playing.
+
+55
+00:03:56,300 --> 00:03:59,420
+It's the name of our boolean equal false.
+
+56
+00:04:00,670 --> 00:04:02,680
+And when we're playing a song.
+
+57
+00:04:03,810 --> 00:04:06,180
+Is playing is going to be true.
+
+58
+00:04:07,350 --> 00:04:11,370
+When we are paused, is playing is going to be equal to.
+
+59
+00:04:12,400 --> 00:04:12,940
+False.
+
+60
+00:04:13,930 --> 00:04:19,650
+And when we first load the page is playing is going to be false because it won't start playing until
+
+61
+00:04:19,650 --> 00:04:20,910
+you hit the play button.
+
+62
+00:04:22,010 --> 00:04:25,550
+Next, we're gonna go over our event listener functionality.
+
+63
+00:04:26,210 --> 00:04:33,860
+So based on whether is playing is true or false, we're gonna want to launch the opposite function.
+
+64
+00:04:33,950 --> 00:04:35,420
+If it's playing, we want to pause.
+
+65
+00:04:35,420 --> 00:04:41,000
+If it's we want to play, we can accomplish this with a ternary operator.
+
+66
+00:04:41,600 --> 00:04:43,550
+So this is similar to an if statement.
+
+67
+00:04:44,510 --> 00:04:45,890
+For those of you unfamiliar.
+
+68
+00:04:46,190 --> 00:04:47,390
+This is the syntax.
+
+69
+00:04:47,480 --> 00:04:51,020
+We're gonna provide a condition in this case.
+
+70
+00:04:51,200 --> 00:04:55,880
+We want to check if the is playing boolean is true or false.
+
+71
+00:04:56,570 --> 00:04:58,910
+And then we have an expression if true.
+
+72
+00:04:59,720 --> 00:05:02,810
+And then we have Colen and then expression if false.
+
+73
+00:05:03,350 --> 00:05:05,870
+In this case, we're gonna run a certain function.
+
+74
+00:05:05,930 --> 00:05:09,950
+If this is true and a different function if it's false.
+
+75
+00:05:10,400 --> 00:05:11,750
+So let's set that up.
+
+76
+00:05:13,170 --> 00:05:15,780
+We're going to add an event listener below our functions.
+
+77
+00:05:17,050 --> 00:05:22,230
+And we'll call it the play or pause event listener.
+
+78
+00:05:23,950 --> 00:05:31,000
+And on our play button, we're going to add an event listener and we're going to add a click event,
+
+79
+00:05:31,630 --> 00:05:36,820
+comma, and we're going to use an arrow function instead of making a separate function for this.
+
+80
+00:05:36,830 --> 00:05:41,260
+So we're going to have brackets, equal sign creator arrow here.
+
+81
+00:05:42,280 --> 00:05:45,670
+We can actually add our ternary operator on the same line.
+
+82
+00:05:46,000 --> 00:05:54,290
+So we're going to add in another bracket here for that operator is playing and then space questionmark.
+
+83
+00:05:54,550 --> 00:06:02,650
+So if it's true now, we want to pause the song and then brackets to show that we're launching the function
+
+84
+00:06:03,280 --> 00:06:09,010
+and then we're gonna have a colon and then we're gonna have play song, the other function, and we're
+
+85
+00:06:09,010 --> 00:06:11,800
+going to have another set of brackets for that function.
+
+86
+00:06:12,280 --> 00:06:14,410
+And we'll put a semicolon at the end here.
+
+87
+00:06:15,040 --> 00:06:18,190
+So just to clarify, these brackets are for that function.
+
+88
+00:06:18,640 --> 00:06:21,520
+This other bracket is for the ternary operator.
+
+89
+00:06:22,000 --> 00:06:25,120
+And this last bracket is for the entire event listener.
+
+90
+00:06:26,080 --> 00:06:26,440
+All right.
+
+91
+00:06:26,560 --> 00:06:30,640
+So let's save that and we can finally check it out.
+
+92
+00:06:35,340 --> 00:06:36,120
+OK, awesome.
+
+93
+00:06:36,180 --> 00:06:37,440
+We have some music playing.
+
+94
+00:06:37,560 --> 00:06:38,430
+That is great.
+
+95
+00:06:39,060 --> 00:06:42,900
+The one thing you might notice, though, is that the play button stayed a play button.
+
+96
+00:06:42,990 --> 00:06:49,540
+We actually want the play button to turn into a pause button if the music's playing and vice versa.
+
+97
+00:06:50,160 --> 00:06:53,220
+So we'll need to add that within our code.
+
+98
+00:06:54,430 --> 00:07:00,860
+So if we go into our play functionality first, below are is playing bullion.
+
+99
+00:07:01,760 --> 00:07:04,900
+We are going to target our play button.
+
+100
+00:07:05,920 --> 00:07:13,660
+Class list and we're going to replace this allows us to do this on one line instead of an add and remove
+
+101
+00:07:13,660 --> 00:07:14,830
+on two separate lines.
+
+102
+00:07:15,730 --> 00:07:19,700
+And we want to replace the class F a dash play.
+
+103
+00:07:20,380 --> 00:07:26,440
+That's what it will start out with when the page loads with F.A. Dash pause.
+
+104
+00:07:27,590 --> 00:07:31,940
+So when it's playing, we want to show the pause icon and vice versa.
+
+105
+00:07:32,360 --> 00:07:36,110
+We'll copy that and we'll put that into our pores.
+
+106
+00:07:36,620 --> 00:07:39,620
+But we're gonna flip these, so we're gonna replace.
+
+107
+00:07:40,800 --> 00:07:51,360
+The pause with the play icon in this case and the last thing we'll do is we actually want to change
+
+108
+00:07:51,360 --> 00:07:52,200
+the title.
+
+109
+00:07:52,410 --> 00:07:54,720
+So you remember that we set the title of play.
+
+110
+00:07:55,320 --> 00:07:58,590
+We can do that by using the set attribute method.
+
+111
+00:07:59,610 --> 00:08:07,080
+And in this, we're going to set the title attribute, comma, and then we're gonna set it with pause
+
+112
+00:08:07,410 --> 00:08:14,070
+so that when we hover over, it will also say pause and won't say play over the pause icon and we'll
+
+113
+00:08:14,070 --> 00:08:14,820
+copy that.
+
+114
+00:08:15,750 --> 00:08:16,770
+Pasted in here.
+
+115
+00:08:17,160 --> 00:08:19,980
+And this time we want the title to be play.
+
+116
+00:08:21,000 --> 00:08:23,700
+All right, so let's save that and check it out.
+
+117
+00:08:24,970 --> 00:08:29,080
+OK, so we can see that we have our play icon here and it says Play.
+
+118
+00:08:29,800 --> 00:08:35,290
+And if we click on it, we can see that we had our Porres icon there.
+
+119
+00:08:35,350 --> 00:08:36,070
+That's awesome.
+
+120
+00:08:36,370 --> 00:08:38,440
+And if we hover over the pause icon.
+
+121
+00:08:41,960 --> 00:08:44,210
+We can see that it's his paws.
+
+122
+00:08:44,330 --> 00:08:45,500
+All right, awesome.
+
+123
+00:08:45,890 --> 00:08:50,120
+We have our play and paws functionality sorted out in the next one.
+
+124
+00:08:50,150 --> 00:08:53,900
+We're going to start looking at our previous and next functionality.
+
+125
+00:08:54,590 --> 00:08:55,520
+I'll see in that one.
+
+126
+00:08:56,000 --> 00:08:56,750
+Bye for now.

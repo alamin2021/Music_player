@@ -1,0 +1,999 @@
+1
+00:00:00,300 --> 00:00:07,950
+All righty, so to start with, there is a template zip file within the course that you should be downloading.
+
+2
+00:00:08,730 --> 00:00:12,060
+And once you've unzipped it, you'll have a folder like this.
+
+3
+00:00:12,660 --> 00:00:15,510
+And what I would suggest you do is rename it.
+
+4
+00:00:15,540 --> 00:00:21,030
+So I'm going to remove the template part and just have it called Music Dasch player, just to show that
+
+5
+00:00:21,060 --> 00:00:27,570
+I'm working on the project now and we're going to open this folder up within Visual Studio Code.
+
+6
+00:00:28,260 --> 00:00:34,860
+OK, so you can see in our sidebar here that we have two extra folders in addition to our three standard
+
+7
+00:00:34,860 --> 00:00:35,370
+files.
+
+8
+00:00:35,880 --> 00:00:37,620
+The first one is an image folder.
+
+9
+00:00:37,650 --> 00:00:40,710
+So these are just images that I pulled from on Splash.
+
+10
+00:00:41,120 --> 00:00:47,050
+I'm going to provide a link to the creator of these images within the CSX file.
+
+11
+00:00:47,700 --> 00:00:51,330
+And I've also included MP three files in a music folder.
+
+12
+00:00:51,810 --> 00:00:54,060
+You'll notice that they have the same names.
+
+13
+00:00:54,330 --> 00:00:59,370
+That's to make it easier in our JavaScript to call these items.
+
+14
+00:01:00,240 --> 00:01:04,080
+And you might notice that these songs actually have my name on them.
+
+15
+00:01:04,140 --> 00:01:07,560
+So these are actually music files that I have produced.
+
+16
+00:01:07,650 --> 00:01:13,290
+I've been making music since I was 16 years old and I thought it'd be cool to throw some into the project.
+
+17
+00:01:14,010 --> 00:01:14,260
+All right.
+
+18
+00:01:14,400 --> 00:01:19,500
+So let's open up our H.T. email, our CSX and our JavaScript files.
+
+19
+00:01:19,590 --> 00:01:23,760
+And then I'm going to hide the sidebar just to make some more room on our page here.
+
+20
+00:01:24,690 --> 00:01:25,230
+All right.
+
+21
+00:01:25,590 --> 00:01:30,480
+So the first thing we're gonna do is just launch our project with our live server extension.
+
+22
+00:01:31,510 --> 00:01:35,710
+OK, so we can see that we already have a background color on our body.
+
+23
+00:01:36,100 --> 00:01:37,750
+You can feel free to change this.
+
+24
+00:01:37,780 --> 00:01:42,850
+But the overall theme I'm going for with this project is a modern craze style.
+
+25
+00:01:43,210 --> 00:01:49,180
+So therefore, I've included some CSX within the template to make things a little bit easier so we can
+
+26
+00:01:49,180 --> 00:01:50,920
+focus more on the JavaScript.
+
+27
+00:01:51,980 --> 00:01:56,630
+So let's jump back to our H.T. mill and start actually building out our project.
+
+28
+00:01:57,590 --> 00:02:03,200
+So the first thing that we're going to include is we're going to actually make a div that's going to
+
+29
+00:02:03,200 --> 00:02:11,480
+contain our entire player so that we have the ability to move it around on the page so we can use the
+
+30
+00:02:11,520 --> 00:02:13,970
+auto complete within visual studio code.
+
+31
+00:02:14,270 --> 00:02:19,220
+So div dot player, dash container and press enter.
+
+32
+00:02:19,520 --> 00:02:22,460
+And that gives us a div with the class player container.
+
+33
+00:02:23,210 --> 00:02:25,670
+And within this we're going to comment on the title.
+
+34
+00:02:26,390 --> 00:02:29,870
+We're going to add in our song properties here.
+
+35
+00:02:30,440 --> 00:02:38,540
+So the first thing is we're going to create a div with the class of AMG dash container for our image
+
+36
+00:02:39,260 --> 00:02:41,660
+and we're going to put an image inside of that.
+
+37
+00:02:42,350 --> 00:02:46,850
+And the source for this image will be our image folder slash.
+
+38
+00:02:47,330 --> 00:02:49,280
+And then you can see it auto completes for us.
+
+39
+00:02:49,310 --> 00:02:55,040
+We're gonna go with the first one, Jacinto Dash one dot jpeg, of course, for your project.
+
+40
+00:02:55,070 --> 00:02:59,330
+If you want to change the audio and the images, you can feel free to.
+
+41
+00:02:59,360 --> 00:03:04,190
+You just want to put in whatever names will correspond to the files you've included.
+
+42
+00:03:04,910 --> 00:03:08,450
+And for our all tech, we're just going to put in album art.
+
+43
+00:03:09,520 --> 00:03:13,930
+And below this, we're going to add in the title.
+
+44
+00:03:15,510 --> 00:03:20,070
+For our songs, we're going to have an H two and we're going to add an I.D. of title.
+
+45
+00:03:20,960 --> 00:03:25,700
+And I'm going to just put in the information that I know it is for the first song.
+
+46
+00:03:26,360 --> 00:03:31,700
+You do the same thing, just put in whatever the song name is that you have in this case.
+
+47
+00:03:31,730 --> 00:03:32,750
+This is the example.
+
+48
+00:03:33,920 --> 00:03:41,420
+I can use the hashtag here to add an idea quicker way so I can have an H three now with the idea of
+
+49
+00:03:41,480 --> 00:03:42,050
+artist.
+
+50
+00:03:42,080 --> 00:03:48,560
+So this is going to be a little bit smaller and I have the artist here and the last thing I'm going
+
+51
+00:03:48,560 --> 00:03:54,050
+to add is the actual audio element itself, which is of course very important.
+
+52
+00:03:54,830 --> 00:03:57,170
+So we can type audio and press tab.
+
+53
+00:03:57,590 --> 00:04:00,380
+The source is going to be our music folder.
+
+54
+00:04:00,830 --> 00:04:02,600
+And again, we're gonna go with the first one.
+
+55
+00:04:02,690 --> 00:04:04,820
+Jacinto Desh one, MP three.
+
+56
+00:04:05,450 --> 00:04:07,100
+And I'm going to take it a step further.
+
+57
+00:04:07,100 --> 00:04:13,130
+And I'm temporarily going to add controls just so that we can actually see the element on the page.
+
+58
+00:04:13,970 --> 00:04:14,270
+All right.
+
+59
+00:04:14,300 --> 00:04:16,620
+So let's save that and check it out.
+
+60
+00:04:18,330 --> 00:04:18,710
+OK.
+
+61
+00:04:18,770 --> 00:04:20,160
+So we have our image here.
+
+62
+00:04:20,700 --> 00:04:22,780
+And if we scroll down, we have our title.
+
+63
+00:04:22,800 --> 00:04:23,640
+We have our artist.
+
+64
+00:04:23,760 --> 00:04:25,860
+And we even have our audio element here.
+
+65
+00:04:26,640 --> 00:04:32,400
+So the good thing about using controls is that it actually enables us to use the audio.
+
+66
+00:04:35,370 --> 00:04:37,410
+So you can see that we have a play pause button.
+
+67
+00:04:37,440 --> 00:04:38,550
+We have the current time.
+
+68
+00:04:38,550 --> 00:04:39,570
+We have the duration.
+
+69
+00:04:40,050 --> 00:04:46,590
+These are things that we are going to recreate ourselves using custom elements that are going to provide
+
+70
+00:04:46,590 --> 00:04:47,910
+the same information.
+
+71
+00:04:49,110 --> 00:04:50,540
+Let's get back to the styling, though.
+
+72
+00:04:51,210 --> 00:04:56,880
+The next thing that is a huge thing that can be changed and customized is, of course, the fonts.
+
+73
+00:04:57,480 --> 00:05:02,580
+So we're going to use Google fonts for that because it's the quickest, easiest way to do it.
+
+74
+00:05:03,210 --> 00:05:06,840
+So on the Web site, you can choose any font that you would like.
+
+75
+00:05:07,530 --> 00:05:10,260
+I have a specific font in mind, so I'm going to search for it.
+
+76
+00:05:10,350 --> 00:05:11,280
+It's called Spartan.
+
+77
+00:05:11,940 --> 00:05:16,830
+So whenever you click on a font that you would like, it goes into a detail view for that font.
+
+78
+00:05:17,670 --> 00:05:21,300
+And I know that I actually want two different font weights here.
+
+79
+00:05:21,360 --> 00:05:24,270
+So I want the regular swinging to click select this style.
+
+80
+00:05:25,110 --> 00:05:27,510
+And I also want a bold version as well.
+
+81
+00:05:27,990 --> 00:05:30,660
+So I'm going to click select this style as well.
+
+82
+00:05:31,440 --> 00:05:35,880
+So I want two different font weights here to add it to the project.
+
+83
+00:05:35,970 --> 00:05:43,350
+We're just gonna click embed and we specifically want the import statement and we're just going to copy
+
+84
+00:05:43,350 --> 00:05:43,980
+this.
+
+85
+00:05:45,000 --> 00:05:47,650
+And we're going to jump back into our CSX.
+
+86
+00:05:48,600 --> 00:05:52,530
+So, you see, this is the credit for the images that I'm using here.
+
+87
+00:05:52,560 --> 00:05:53,940
+Feel free to check out his work.
+
+88
+00:05:53,970 --> 00:05:57,990
+He has a lot of great stuff on UN Splash and right below that.
+
+89
+00:05:58,350 --> 00:06:00,970
+I'm going to add in our import statement for our font.
+
+90
+00:06:01,830 --> 00:06:07,050
+And then within the body can see we already have some styling here.
+
+91
+00:06:07,680 --> 00:06:13,960
+I'm going to add in the font family and it's going to be Spartan comma.
+
+92
+00:06:14,340 --> 00:06:19,080
+I'm going to add sun dash surf just as a backup in case it doesn't load.
+
+93
+00:06:19,800 --> 00:06:21,510
+OK, so let's save that.
+
+94
+00:06:21,900 --> 00:06:24,570
+Jump back and check it out.
+
+95
+00:06:25,140 --> 00:06:25,710
+OK.
+
+96
+00:06:25,800 --> 00:06:28,980
+I would say that that font looks a whole lot better.
+
+97
+00:06:29,700 --> 00:06:30,180
+Awesome.
+
+98
+00:06:30,750 --> 00:06:35,470
+Next, we're gonna move on to actually styling our player container.
+
+99
+00:06:35,880 --> 00:06:39,600
+So you can see right now that the image is as big as it wants to be.
+
+100
+00:06:39,630 --> 00:06:46,860
+But we want the image to be a certain size and we want the container that's holding that image to also
+
+101
+00:06:46,860 --> 00:06:49,830
+be much smaller than this currently is.
+
+102
+00:06:50,430 --> 00:06:56,070
+So let's jump back to our CSX and right below our body.
+
+103
+00:06:56,610 --> 00:06:59,340
+We're going to start styling for our player container.
+
+104
+00:07:02,290 --> 00:07:04,990
+So this was the first d'Hiv that we created.
+
+105
+00:07:05,890 --> 00:07:09,190
+We're going to start with giving it a certain size.
+
+106
+00:07:09,820 --> 00:07:17,320
+So I'm going to give it a height of five hundred pixels and I'm going to give it a width of 400 pixels.
+
+107
+00:07:17,890 --> 00:07:23,680
+So the reason I want it to be 400 is because most smartphones, large smartphones, I should say.
+
+108
+00:07:24,370 --> 00:07:31,230
+So I have the S 20 plus, for example, their screen width is just a little bit over 400 pixels.
+
+109
+00:07:31,270 --> 00:07:35,590
+So this will be able to fit on that screen without any kind of media queries.
+
+110
+00:07:36,750 --> 00:07:37,140
+OK.
+
+111
+00:07:37,280 --> 00:07:40,940
+And the next thing is we want to create a background color.
+
+112
+00:07:42,110 --> 00:07:46,760
+For this, so the next thing is we want to have a background color.
+
+113
+00:07:46,790 --> 00:07:49,580
+That's just a little bit lighter than our body background color.
+
+114
+00:07:50,150 --> 00:07:53,060
+So I'm actually in a copy this again.
+
+115
+00:07:53,510 --> 00:07:55,460
+You can choose whatever colors you would like.
+
+116
+00:07:56,390 --> 00:08:02,030
+But what I'm gonna do is I'm actually going to use something that's very handy within Visual Studio
+
+117
+00:08:02,030 --> 00:08:02,510
+Code.
+
+118
+00:08:02,930 --> 00:08:04,520
+And that is the color picker.
+
+119
+00:08:05,690 --> 00:08:11,300
+So you see, if I hover over it, it opens up the color picker and I can just kind of decide to pick
+
+120
+00:08:11,330 --> 00:08:12,170
+a lighter color.
+
+121
+00:08:12,800 --> 00:08:14,930
+So we want it to be lighter.
+
+122
+00:08:15,380 --> 00:08:17,000
+I think that's a good color there.
+
+123
+00:08:17,510 --> 00:08:18,290
+OK, perfect.
+
+124
+00:08:18,650 --> 00:08:20,720
+So keep in mind, you can do a similar thing.
+
+125
+00:08:21,140 --> 00:08:25,670
+You can select a background color and use the color picker to just pick a lighter version.
+
+126
+00:08:26,480 --> 00:08:26,720
+All right.
+
+127
+00:08:26,750 --> 00:08:28,910
+So let's save that and check it out.
+
+128
+00:08:29,650 --> 00:08:30,020
+OK.
+
+129
+00:08:30,110 --> 00:08:32,090
+So we can see that we have our container here.
+
+130
+00:08:32,090 --> 00:08:34,040
+We see our image is still way too big.
+
+131
+00:08:34,610 --> 00:08:38,270
+But I like the way that this gray works with this gray.
+
+132
+00:08:39,110 --> 00:08:39,540
+OK.
+
+133
+00:08:39,950 --> 00:08:45,740
+Now I'm going to show you two properties that you can use that will instantly make whatever you're working
+
+134
+00:08:45,740 --> 00:08:45,980
+on.
+
+135
+00:08:46,010 --> 00:08:47,180
+Look more modern.
+
+136
+00:08:48,140 --> 00:08:51,680
+So the first one is border radius.
+
+137
+00:08:52,190 --> 00:08:57,680
+So this is having the ability to add rounded corners to any element.
+
+138
+00:08:58,400 --> 00:09:02,420
+So in this case, I'm going to add a border radius of 20 pixels.
+
+139
+00:09:03,230 --> 00:09:05,340
+So rounded corners is very important.
+
+140
+00:09:05,390 --> 00:09:10,730
+And it's a trend that has been continuing for a number of years and shows no signs of letting up.
+
+141
+00:09:11,120 --> 00:09:14,900
+So you can see just by rounding that corner, it looks a lot more modern.
+
+142
+00:09:16,190 --> 00:09:19,400
+The second thing is using box shadow.
+
+143
+00:09:20,060 --> 00:09:22,520
+So it provides a shadow to elements.
+
+144
+00:09:25,270 --> 00:09:26,700
+In this case, our d'Hiv.
+
+145
+00:09:27,370 --> 00:09:32,080
+And that allows it to look like the element itself is kind of floating on the page.
+
+146
+00:09:32,680 --> 00:09:36,070
+So there are a couple different values we're going to need to enter here.
+
+147
+00:09:36,730 --> 00:09:38,950
+The first one is horizontal offset.
+
+148
+00:09:38,980 --> 00:09:42,280
+So that means a shadow is going to go left or right of the element.
+
+149
+00:09:42,610 --> 00:09:44,060
+We actually don't want any of that.
+
+150
+00:09:44,080 --> 00:09:45,880
+We just want a vertical shadow.
+
+151
+00:09:45,900 --> 00:09:48,490
+So just a shadow directly below the object.
+
+152
+00:09:48,850 --> 00:09:56,290
+So the vertical offset, we're gonna set at 15 pixels and the next property is referred to as Blur.
+
+153
+00:09:57,010 --> 00:10:00,310
+And this is the amount of opacity added to the shadow.
+
+154
+00:10:00,790 --> 00:10:04,600
+So if you had a value of zero here, it would make it a solid color.
+
+155
+00:10:05,200 --> 00:10:06,470
+Of course, we don't want that.
+
+156
+00:10:06,490 --> 00:10:07,930
+We want it to be very subtle.
+
+157
+00:10:08,020 --> 00:10:10,690
+So we're gonna give that a big value of 30 pixels.
+
+158
+00:10:11,380 --> 00:10:16,720
+The next value is the spread value, which determines how far out from the element.
+
+159
+00:10:16,750 --> 00:10:20,320
+The shadow is, again, because we want it to be subtle.
+
+160
+00:10:20,620 --> 00:10:24,850
+We're gonna set that at five pixels so it's not too far away from the object.
+
+161
+00:10:25,630 --> 00:10:32,430
+The very last thing is we're gonna set the color and we're gonna use an RGV a value and we're gonna
+
+162
+00:10:32,440 --> 00:10:33,220
+use black.
+
+163
+00:10:33,250 --> 00:10:34,690
+So zero zero zero.
+
+164
+00:10:35,230 --> 00:10:40,030
+And then the A stands for Alpha, which can also be thought of as opacity.
+
+165
+00:10:40,570 --> 00:10:42,580
+And we're gonna make that zero point three.
+
+166
+00:10:42,700 --> 00:10:43,570
+So that makes it.
+
+167
+00:10:44,620 --> 00:10:47,910
+30 percent of the black color.
+
+168
+00:10:48,010 --> 00:10:49,090
+So it's kind of See-Through.
+
+169
+00:10:49,870 --> 00:10:50,170
+All right.
+
+170
+00:10:50,200 --> 00:10:52,440
+So let's save that and check it out.
+
+171
+00:10:53,670 --> 00:10:56,250
+OK, so you see what I mean about the shadow here.
+
+172
+00:10:56,640 --> 00:11:01,170
+It looks like it's kind of coming off the page, but it's very, very subtle.
+
+173
+00:11:01,590 --> 00:11:03,810
+I think that looks a whole lot better.
+
+174
+00:11:04,560 --> 00:11:06,630
+I hope that you feel the same way about that.
+
+175
+00:11:06,720 --> 00:11:09,030
+And I hope that you enjoyed this quick tip.
+
+176
+00:11:10,020 --> 00:11:13,500
+Next, we're going to start trying to tame our image here.
+
+177
+00:11:14,130 --> 00:11:18,750
+Next thing is we're going to try to tame our image here and we're going to use an approach that would
+
+178
+00:11:18,750 --> 00:11:22,830
+allow you to put in an image of any size and have it fit properly.
+
+179
+00:11:23,670 --> 00:11:26,670
+So this is through using something called object fit.
+
+180
+00:11:27,480 --> 00:11:32,970
+So you can see that we have a whitespace here of a rectangle, but we see that this image does not fill
+
+181
+00:11:33,000 --> 00:11:33,810
+this space.
+
+182
+00:11:34,680 --> 00:11:40,830
+If we switch to fill, we can see that it fills the space, but it distorts the image.
+
+183
+00:11:41,430 --> 00:11:47,520
+We're actually going to use this option object fit cover, which allows it to fill the space but not
+
+184
+00:11:47,520 --> 00:11:48,720
+distort the image.
+
+185
+00:11:49,260 --> 00:11:55,020
+So that's what will allow you to put in any size image and it will just fill the space properly.
+
+186
+00:11:56,140 --> 00:11:59,200
+OK, so let's jump to our see, assess and figure that out.
+
+187
+00:12:00,480 --> 00:12:04,240
+OK, so you can see that we already have some styling within our image container.
+
+188
+00:12:04,650 --> 00:12:07,530
+We're going to need now to set the height and width.
+
+189
+00:12:08,750 --> 00:12:11,300
+So first, I'm going to make it a square.
+
+190
+00:12:11,420 --> 00:12:16,430
+So I'm just going to have a height of three hundred pixels and a width of 300 pixels.
+
+191
+00:12:16,940 --> 00:12:20,570
+Of course, I want it to be smaller than the width of our overall container.
+
+192
+00:12:20,990 --> 00:12:25,760
+And you can see that it'll have 50 pixels on the left and then 50 pixels on the right.
+
+193
+00:12:26,000 --> 00:12:28,950
+That's how we're going to center it within our player.
+
+194
+00:12:28,970 --> 00:12:29,480
+Container.
+
+195
+00:12:30,500 --> 00:12:33,860
+And the next thing is below our image container.
+
+196
+00:12:34,160 --> 00:12:39,230
+We're gonna actually need to do some styling for the image within our image container.
+
+197
+00:12:40,040 --> 00:12:40,920
+So let's do that.
+
+198
+00:12:40,940 --> 00:12:43,040
+Below image container.
+
+199
+00:12:43,460 --> 00:12:46,810
+And we want to target the image element inside.
+
+200
+00:12:48,000 --> 00:12:51,720
+And we're going to set this height to be 100 percent.
+
+201
+00:12:52,930 --> 00:13:00,190
+And the with to be 100 percent as well, because the container is setting the hard pixel value and we're
+
+202
+00:13:00,190 --> 00:13:04,030
+just using this to have the image fill the container.
+
+203
+00:13:04,810 --> 00:13:09,250
+And, of course, we can add the object fit cover as well.
+
+204
+00:13:09,460 --> 00:13:10,690
+Like I just explained.
+
+205
+00:13:11,530 --> 00:13:14,380
+And we also want to add border radius and box shadow.
+
+206
+00:13:14,530 --> 00:13:16,210
+So I'll actually copy this.
+
+207
+00:13:17,480 --> 00:13:21,770
+But this time, we want the box shadow to be a little bit more subtle.
+
+208
+00:13:22,160 --> 00:13:27,200
+So instead of 15 pixels for a vertical offset, it's going gonna change it to five.
+
+209
+00:13:27,650 --> 00:13:29,540
+OK, so let's save that.
+
+210
+00:13:29,660 --> 00:13:31,270
+And check it out.
+
+211
+00:13:32,540 --> 00:13:34,820
+OK, maybe you want that to be a little bit darker.
+
+212
+00:13:34,850 --> 00:13:39,800
+So you know what, I can increase this from zero point three to zero point five.
+
+213
+00:13:40,890 --> 00:13:41,400
+OK.
+
+214
+00:13:41,460 --> 00:13:43,810
+So that's looking really, really nice.
+
+215
+00:13:44,080 --> 00:13:44,650
+Perfect.
+
+216
+00:13:45,610 --> 00:13:49,600
+But let's have a look at the mobile view and see what that looks like.
+
+217
+00:13:51,930 --> 00:13:58,920
+OK, so we can see that we're in the mobile view for an iPhone X and we can see that our container is
+
+218
+00:13:58,920 --> 00:14:05,250
+not fitting because the width of an iPhone is three hundred and seventy five pixels and the width of
+
+219
+00:14:05,310 --> 00:14:07,860
+our player container is 400 pixels.
+
+220
+00:14:08,340 --> 00:14:12,390
+So we're gonna need to change that value in order to make that work.
+
+221
+00:14:12,990 --> 00:14:15,100
+So let's jump back to our C assess.
+
+222
+00:14:15,570 --> 00:14:21,750
+And if we scroll to the bottom, this is always where you want your media queries because you want it
+
+223
+00:14:21,750 --> 00:14:24,180
+to override anything else above.
+
+224
+00:14:24,330 --> 00:14:25,950
+You want this to have the last word.
+
+225
+00:14:26,990 --> 00:14:34,890
+And we're gonna target our player container and we're just going to change the width to be ninety five.
+
+226
+00:14:35,000 --> 00:14:35,540
+V.
+
+227
+00:14:35,600 --> 00:14:36,250
+W.
+
+228
+00:14:36,860 --> 00:14:44,480
+So that means ninety five percent of the screen with meaning that it'll have 2.5 percent of the screen
+
+229
+00:14:44,480 --> 00:14:47,150
+with margin on the left and right side.
+
+230
+00:14:47,960 --> 00:14:49,880
+And you can see that specifically.
+
+231
+00:14:49,880 --> 00:14:55,700
+I already made this media query for iPhone vertical and the max width is three hundred and seventy six
+
+232
+00:14:55,700 --> 00:14:56,300
+pixels.
+
+233
+00:14:56,750 --> 00:15:00,530
+So anything less than that will be controlled by this media query.
+
+234
+00:15:00,950 --> 00:15:04,460
+Of course, our iPhones are three hundred and seventy five pixels.
+
+235
+00:15:04,940 --> 00:15:06,810
+Let's jump back and check that out.
+
+236
+00:15:07,490 --> 00:15:07,740
+OK.
+
+237
+00:15:07,790 --> 00:15:08,240
+Perfect.
+
+238
+00:15:08,270 --> 00:15:11,860
+So everything is now fitting in our iPhone size.
+
+239
+00:15:12,020 --> 00:15:12,500
+Awesome.
+
+240
+00:15:13,460 --> 00:15:15,140
+If you have any issues with this.
+
+241
+00:15:15,470 --> 00:15:17,830
+Sometimes a dev tools a little bit finicky.
+
+242
+00:15:17,840 --> 00:15:22,100
+You might have to click responsive and then go back down to the size that you want.
+
+243
+00:15:22,520 --> 00:15:27,260
+In this case, also, the audio element controls might cause some issues.
+
+244
+00:15:27,560 --> 00:15:32,510
+So try just deleting this element and it'll show that the layout is working fine.
+
+245
+00:15:32,870 --> 00:15:38,150
+Don't worry about deleting this because this actually won't be part of the UI of our final project.
+
+246
+00:15:39,050 --> 00:15:39,410
+All right.
+
+247
+00:15:39,500 --> 00:15:42,920
+So everything's looking really great so far for our layout.
+
+248
+00:15:43,430 --> 00:15:47,840
+Let's take a break here and we'll build out the rest of the UI in the next one.
+
+249
+00:15:48,530 --> 00:15:49,280
+I'll see you then.
+
+250
+00:15:49,520 --> 00:15:50,270
+Bye for now.
